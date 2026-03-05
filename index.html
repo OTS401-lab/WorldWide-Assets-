@@ -4,114 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Assist & Visa Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        html { scroll-behavior: smooth; }
+        :root { --primary: #1e3a8a; --secondary: #2563eb; --success: #22c55e; --bg: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg); color: #333; line-height: 1.6; }
+        
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+        
+        .container { max-width: 1000px; margin: -40px auto 40px; padding: 0 20px; }
+        
+        /* Pricing Table Style */
+        .price-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .price-card h2 { color: var(--primary); margin-bottom: 20px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #f1f5f9; color: var(--primary); }
+        .price-tag { font-weight: bold; color: var(--secondary); text-align: right; }
+
+        .btn-whatsapp { display: flex; align-items: center; justify-content: center; background: var(--success); color: white; text-decoration: none; padding: 15px; border-radius: 10px; font-weight: bold; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4); }
+        .btn-whatsapp i { margin-right: 10px; font-size: 1.5rem; }
+
+        .footer { text-align: center; padding: 20px; color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-2xl font-bold text-blue-700">Global Assist</h1>
-        <div class="space-x-6 hidden md:block">
-            <a href="#home" class="hover:text-blue-600 font-medium">Home</a>
-            <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
-            <a href="#dashboard" class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-700">Dashboard</a>
-        </div>
-    </nav>
+<header>
+    <div class="hero">
+        <h1>Global Assist & Visa Solutions</h1>
+        <p>Expert assistance for Saudi Visas, Absher, and Job Matching.</p>
+    </div>
+</header>
 
-    <header id="home" class="gradient-bg text-white py-24 px-6 text-center">
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Global Assist & Visa Solutions</h2>
-        <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Expert assistance for Absher, Pension Accounts, Visa Processing, and Global Job Matching.</p>
-        <div class="flex justify-center gap-4">
-            <a href="https://wa.me/966560976031" target="_blank" class="bg-green-500 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-green-600 transition flex items-center">
-                <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Chat with Us
-            </a>
-            <a href="#services" class="bg-white text-blue-700 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition">Our Services</a>
-        </div>
-    </header>
+<div class="container">
+    <div class="price-card">
+        <h2>Our Service Rates</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th style="text-align: right;">Charges</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Saudi Company Visa</td>
+                    <td class="price-tag">5,00,000 BDT</td>
+                </tr>
+                <tr>
+                    <td>Kafeel Work (Kapala)</td>
+                    <td class="price-tag">1,000 SAR</td>
+                </tr>
+                <tr>
+                    <td>Non-Kafeel Work</td>
+                    <td class="price-tag">500 SAR</td>
+                </tr>
+                <tr>
+                    <td>Absher Account Opening</td>
+                    <td class="price-tag">15 SAR</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-center mb-16 text-blue-900">Why Choose Our Services?</h3>
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-b-8 border-blue-600">
-                <i class="fa-solid fa-user-shield text-5xl text-blue-600 mb-6"></i>
-                <h4 class="text-2xl font-bold mb-3">Absher & Pension</h4>
-                <p class="text-gray-600 leading-relaxed">Secure setup and management of Absher accounts and overseas pension schemes for expats.</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-b-8 border-blue-600">
-                <i class="fa-solid fa-passport text-5xl text-blue-600 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">Visa Assistance</h4>
-                <p class="text-gray-600 leading-relaxed">Expert guidance for Student, Work, and Tourist visas to Europe, USA, and Middle East.</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-b-8 border-blue-600">
-                <i class="fa-solid fa-briefcase text-5xl text-blue-600 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">Job Matching</h4>
-                <p class="text-gray-600 leading-relaxed">Connecting skilled workers with verified international employers and job opportunities.</p>
-            </div>
-        </div>
-    </section>
+        <a href="https://wa.me/966560976031" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+        </a>
+    </div>
 
-    <section id="dashboard" class="py-20 bg-gray-100 px-6">
-        <div class="max-w-5xl mx-auto bg-white p-10 rounded-3xl shadow-2xl border border-gray-200">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
-                <h3 class="text-3xl font-bold text-blue-900">Live Client Dashboard</h3>
-                <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold mt-4 md:mt-0">Tracking System v2.0</span>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-gray-50 p-8 rounded-2xl border-2 border-dashed border-blue-300">
-                    <h4 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fa-solid fa-cloud-arrow-up mr-2 text-blue-600"></i> Submit Documents
-                    </h4>
-                    <p class="text-sm text-gray-500 mb-4">Upload Passport, NID or Certificates (Max 5MB)</p>
-                    <input type="file" class="block w-full border border-gray-300 p-3 rounded-lg bg-white mb-4 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <button onclick="window.open('https://wa.me/966560976031?text=Hi, I have uploaded my document. Please check.', '_blank')" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold shadow-lg hover:bg-blue-700 transition">
-                        Submit & Notify Admin
-                    </button>
-                </div>
-
-                <div class="space-y-6">
-                    <h4 class="text-xl font-bold mb-4">Application Progress</h4>
-                    <div class="p-5 bg-white rounded-xl shadow border-l-4 border-green-500">
-                        <div class="flex justify-between items-center">
-                            <span class="font-semibold">Absher Account Setup</span>
-                            <span class="text-green-600 font-bold">100% DONE</span>
-                        </div>
-                        <div class="w-full bg-gray-200 h-2 rounded mt-2">
-                            <div class="bg-green-500 h-2 rounded w-full"></div>
-                        </div>
-                    </div>
-                    <div class="p-5 bg-white rounded-xl shadow border-l-4 border-yellow-500">
-                        <div class="flex justify-between items-center">
-                            <span class="font-semibold">Work Visa Processing</span>
-                            <span class="text-yellow-600 font-bold">IN REVIEW</span>
-                        </div>
-                        <div class="w-full bg-gray-200 h-2 rounded mt-2">
-                            <div class="bg-yellow-500 h-2 rounded w-3/4 animate-pulse"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-blue-900 text-white py-12 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h4 class="text-2xl font-bold mb-4">Ready to Start?</h4>
-            <p class="mb-6 opacity-75">Contact us today and let our experts handle your documentation.</p>
-            <p class="text-sm opacity-50 mb-4 font-mono">Customer Support: +966 56 097 6031</p>
-            <div class="border-t border-blue-800 pt-8 text-sm opacity-60">
-                &copy; 2026 Global Assist & Visa Solutions. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/966560976031" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition duration-300 z-[999]">
-        <i class="fa-brands fa-whatsapp text-4xl"></i>
-    </a>
+    <div class="footer">
+        &copy; 2026 Global Assist. All rights reserved.
+    </div>
+</div>
 
 </body>
 </html>
